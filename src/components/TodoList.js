@@ -1,6 +1,24 @@
-export const TodoList=()=>{
-  return(
+import React from 'react';
+
+const TodoList = ({ todos, handleComplete }) => {
+  return (
     <>
+      <h2>Child Component</h2>
+      <ul>
+        {todos.map(todo => (
+          <li key={todo.id}>
+            {todo.text}
+            <button 
+              onClick={() => handleComplete(todo.id)}
+              disabled={todo.completed}
+            >
+              {todo.completed ? 'Completed' : 'Complete'}
+            </button>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
+
+export default TodoList;
