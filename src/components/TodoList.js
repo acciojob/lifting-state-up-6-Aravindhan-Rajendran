@@ -8,12 +8,9 @@ const TodoList = ({ todos, handleComplete }) => {
         {todos.map(todo => (
           <li key={todo.id}>
             {todo.text}
-            <button 
-              onClick={() => handleComplete(todo.id)}
-              disabled={todo.completed}
-            >
-              {todo.completed ? 'Completed' : 'Complete'}
-            </button>
+<button onClick={() => handleComplete(todo.id)} disabled={todo.completed}>
+  {todo.completed ? 'Completed' : 'Complete'}
+</button>
           </li>
         ))}
       </ul>
