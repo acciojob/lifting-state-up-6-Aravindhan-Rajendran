@@ -5,7 +5,13 @@ import './../styles/App.css';
 const App = () => {
   return (
     <div>
-        {/* Do not remove the main div */}
+       <h1>Parent Component</h1>
+    <h2>Child Component</h2>
+    <ul>
+    <li>Learn React<button onClick={handleComplete}>Complete</button></li>
+    <li>Build a React app<button onClick={handleComplete}>Complete</button></li>
+    <li>Deploy the React App<button onClick={handleComplete}>Complete</button></li>
+    </ul>
     </div>
   )
 }
