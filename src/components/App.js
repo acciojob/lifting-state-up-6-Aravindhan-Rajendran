@@ -8,11 +8,13 @@ const App = () => {
     { id: 2, text: 'Build a React app', completed: false },
     { id: 3, text: 'Deploy the React App', completed: false },
   ]);
-const handleComplete = (id) => {
-  setTodos(todos.map(todo =>
-    todo.id === id ? { ...todo, completed: !todo.completed } : todo
-  ));
-};
+
+  const handleComplete = (id) => {
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ));
+  };
+
   return (
     <div>
       <h1>Parent Component</h1>
