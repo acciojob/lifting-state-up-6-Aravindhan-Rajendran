@@ -12,7 +12,7 @@ const TodoList = ({ todos, handleComplete }) => {
               onClick={() => handleComplete(todo.id)}
               disabled={todo.completed}
             >
-              {todo.completed ? 'Completed' : 'Complete'}
+              {todo.completed ? '' : 'Complete'}
             </button>
           </li>
         ))}
