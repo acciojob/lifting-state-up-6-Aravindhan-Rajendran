@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TodoList = ({ todos, handleComplete }) => {
   console.log('Todos:', todos); // Debug log
   return (
@@ -20,5 +19,4 @@ const TodoList = ({ todos, handleComplete }) => {
     </>
   );
 }
-
 export default TodoList;
