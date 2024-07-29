@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoList from './TodoList';
-import '../styles/App.css';
+import '../styles/App.css'; // Corrected import statement
+
 const App = () => {
   const [todos, setTodos] = useState([
     { id: 1, text: 'Learn React', completed: false },
@@ -8,12 +9,13 @@ const App = () => {
     { id: 3, text: 'Deploy the React app', completed: false },
   ]);
 
-const handleComplete = (id) => {
-  console.log('Completing todo with id:', id); // Debug log
-  setTodos(todos.map(todo =>
-    todo.id === id ? { ...todo, completed: true } : todo
-  ));
-};
+  const handleComplete = (id) => {
+    console.log('Completing todo with id:', id); // Debug log
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: true } : todo
+    ));
+  };
+
   return (
     <div>
       <h1>My Todo App</h1> {/* Added a header for the whole app */}
