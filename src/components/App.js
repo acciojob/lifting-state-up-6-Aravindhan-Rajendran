@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TodoList from './TodoList';
-import '../styles/App.css'; // Make sure this path is correct
+import '../styles/App.css'; // Ensure this path is correct
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -9,12 +9,13 @@ const App = () => {
     { id: 3, text: 'Deploy the React app', completed: false },
   ]);
 
-const handleComplete = (id) => {
-  console.log('Completing todo with id:', id); // Debug log
-  setTodos(todos.map(todo =>
-    todo.id === id ? { ...todo, completed: true } : todo
-  ));
-};
+  const handleComplete = (id) => {
+    console.log('Completing todo with id:', id); // Debug log
+    setTodos(todos.map(todo =>
+      todo.id === id ? { ...todo, completed: true } : todo
+    ));
+  };
+
   return (
     <div>
       <h1>My Todo App</h1>
