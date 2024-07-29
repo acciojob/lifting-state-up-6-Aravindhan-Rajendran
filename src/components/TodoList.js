@@ -9,11 +9,11 @@ const TodoList = ({ todos, handleComplete }) => {
         {todos.map(todo => (
           <li key={todo.id} className={todo.completed ? 'completed' : ''}>
             {todo.text}
-{!todo.completed && (
-  <button onClick={() => handleComplete(todo.id)}>
-    Complete
-  </button>
-)}
+            {!todo.completed && (
+              <button onClick={() => handleComplete(todo.id)}>
+                Complete
+              </button>
+            )}
           </li>
         ))}
       </ul>
