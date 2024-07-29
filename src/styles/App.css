@@ -2,20 +2,9 @@
   font-family: Arial, sans-serif;
   padding: 20px;
 }
+
 .completed {
   text-decoration: line-through;
-}
-.tour {
-  border: 1px solid #ddd;
-  padding: 16px;
-  margin: 16px;
-  border-radius: 8px;
-}
-
-.tour img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
 }
 
 button {
@@ -30,21 +19,4 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-.loading {
-  text-align: center;
-  font-size: 24px;
-}
-
-.no-tours {
-  text-align: center;
-}
-
-.delete-button {
-  background-color: #dc3545;
-}
-
-.delete-button:hover {
-  background-color: #c82333;
 }
