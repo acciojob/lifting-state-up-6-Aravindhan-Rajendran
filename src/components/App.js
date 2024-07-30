@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import TodoList from './TodoList';
-import '../styles/App.css'; // Ensure this path is correct
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -8,15 +7,12 @@ const App = () => {
     { id: 2, text: 'Build a React app', completed: false },
     { id: 3, text: 'Deploy the React app', completed: false },
   ]);
-const handleComplete = async (id) => {
-  await setTodos(prevTodos => {
-    const newTodos = prevTodos.map(todo =>
+
+  const handleComplete = (id) => {
+    setTodos(todos.map(todo => 
       todo.id === id ? { ...todo, completed: true } : todo
-    );
-    console.log('New todos:', newTodos); // Debug log
-    return newTodos;
-  });
-};
+    ));
+  };
 
   return (
     <div>
