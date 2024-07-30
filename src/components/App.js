@@ -8,13 +8,12 @@ const App = () => {
     { id: 2, text: 'Build a React app', completed: false },
     { id: 3, text: 'Deploy the React app', completed: false },
   ]);
-
-  const handleComplete = (id) => {
-    console.log('Completing todo with id:', id); // Debug log
-    setTodos(todos.map(todo =>
-      todo.id === id ? { ...todo, completed: true } : todo
-    ));
-  };
+const handleComplete = (id) => {
+  console.log('Completing todo with id:', id); // Debug log
+  setTodos(todos.map(todo =>
+    todo.id === id ? { ...todo, completed: true } : todo
+  ));
+};
 
   return (
     <div>
