@@ -1,3 +1,5 @@
+import React from ‘react’;
+
 const TodoList = ({ todos, handleComplete }) => {
   return (
     <ul>
@@ -14,3 +16,5 @@ const TodoList = ({ todos, handleComplete }) => {
     </ul>
   );
 }
+
+export default TodoList;
