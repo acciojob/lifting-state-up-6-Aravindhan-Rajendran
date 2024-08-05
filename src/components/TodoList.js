@@ -3,13 +3,13 @@ import React from 'react';
 const TodoList = ({ todos, handleComplete }) => {
   return (
     <ul>
-      {todos.map(todo => (
+      {todos.map((todo) => (
         <li key={todo.id}>
-          <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-            {todo.text}
-          </span>
+          {todo.text}
           {!todo.completed && (
-            <button onClick={() => handleComplete(todo.id)}>Complete</button>
+            <button onClick={() => handleComplete(todo.id)}>
+              Complete
+            </button>
           )}
         </li>
       ))}
