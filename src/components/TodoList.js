@@ -1,3 +1,4 @@
+// TodoList.js
 import React from 'react';
 
 function TodoList({ todos, onComplete }) {
@@ -5,9 +6,8 @@ function TodoList({ todos, onComplete }) {
     <ul>
       {todos.map(todo => (
         <li key={todo.id}>
-            <span>{todo.text}</span>
-          <span style={{ display: todo.completed ? 'none' : '' }}>
-              {todo.button}
+          <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+            {todo.text}
           </span>
           {!todo.completed && (
             <button onClick={() => onComplete(todo.id)}>Complete</button>
